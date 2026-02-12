@@ -632,7 +632,7 @@
             displayItems.forEach((icon, index) => {
                 const spot = document.createElement('div');
                 spot.classList.add('hiding-spot');
-                spot.innerHTML = `<img src="${icon}" width="60">`;
+                spot.innerHTML = `<img src="${icon}">`;
                 spot.dataset.hasHeart = heartIndices.has(index);
                 spot.onclick = () => checkSpot(spot);
                 container.appendChild(spot);
