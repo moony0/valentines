@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Petit+Formal+Script&family=Simonetta&display=swap" rel="stylesheet">
+    <audio id="bleh-sound" src="bleehhh!!-_3-made-with-Voicemod.mp3" preload="auto"></audio>
     <style>
         :root {
             --primary-color: #ff4d6d;
@@ -640,6 +641,10 @@
 
         function checkSpot(element) {
             if (element.classList.contains('shaking') || element.classList.contains('revealed')) return;
+
+            const clickSound = document.getElementById('bleh-sound');
+            clickSound.currentTime = 0; 
+            clickSound.play();
 
             if (element.dataset.hasHeart === "true") {
                 // FOUND HEART
