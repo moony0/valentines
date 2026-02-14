@@ -446,7 +446,7 @@
 
     <!-- Envelope Stage -->
     <div id="envelope-stage">
-        <div class="envelope-container" id="envelope">
+        <div class="envelope-container" id="envelope" onclick="openEnvelope()">
             <div class="envelope">
                 <div class="pocket"></div>
                 <!-- The letter inside -->
@@ -486,13 +486,20 @@
         }
 
         .hiding-spot {
-            font-size: 4rem;
+            font-size: 2rem;
             cursor: pointer;
             transition: transform 0.3s ease, opacity 0.3s;
             position: relative;
             user-select: none;
             filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.1));
         }
+
+        .hiding-spot img {
+            width: 90px;
+            height: auto;
+            pointer-events: none;
+        }
+
 
         .hiding-spot:hover {
             transform: scale(1.1) translateY(-5px);
